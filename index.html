@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="theme-toggle" aria-label="Alternar tema">🌙</button>
+
+    <main>
+        <header>
+            <h1>Quem está assistindo?</h1>
+            <p>Escolha um perfil para continuar:</p>
+        </header>
+
+        <section aria-label="Seleção de perfis" class="profiles">
+            <ul>
+                <li class="profile">
+                    <a href="catalogo/catalogo.html">
+                        <button type="button" aria-label="Escolher Perfil 1">
+                            <figure>
+                                <img src="/assets/perfil-1.jfif" alt="Jonas de Dark.">
+                                <figcaption>Vinícius</figcaption>
+                            </figure>
+                        </button>
+                    </a>
+                </li>
+                <li class="profile">
+                    <a href="catalogo/catalogo.html">
+                        <button type="button" aria-label="Escolher Perfil 2">
+                            <figure>
+                                <img src="/assets/perfil-2.jpg" alt="Jinx de arcane.">
+                                <figcaption>Rafaella</figcaption>
+                            </figure>
+                        </button>
+                    </a>
+                </li>
+                <li class="profile">
+                    <a href="catalogo/catalogo.html">
+                        <button type="button" aria-label="Escolher Perfil 3">
+                            <figure>
+                                <img src="/assets/perfil-3.jpg" alt="Eleven de Stranger Things.">
+                                <figcaption>Paula</figcaption>
+                            </figure>
+                        </button>
+                    </a>
+                </li>
+                <li class="profile">
+                    <a href="catalogo/catalogo.html">
+                        <button type="button" aria-label="Escolher Perfil 4">
+                            <figure>
+                                <img src="/assets/perfil-4.jpg" alt="Walter White de Breaking Bad.">
+                                <figcaption>Flávio</figcaption>
+                            </figure>
+                        </button>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <button id="manage-profiles" type="button">GERENCIAR PERFIS</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
