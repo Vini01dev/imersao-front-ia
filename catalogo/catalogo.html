@@ -75,7 +75,7 @@
     </footer>
 
     <script>
-      const activeProfile = localStorage.getItem('activeProfile');
+           const activeProfile = localStorage.getItem('activeProfile');
       if (activeProfile) {
         try {
           const profile = JSON.parse(activeProfile);
@@ -83,7 +83,13 @@
           const avatarEl = document.querySelector('.profile-icon');
           if (nameEl && profile.name) nameEl.textContent = profile.name;
           if (avatarEl && profile.imgSrc) {
-            avatarEl.src = profile.imgSrc;
+            let imgSrc = profile.imgSrc;
+            if (imgSrc.startsWith('/')) {
+              imgSrc = '..' + imgSrc;
+            } else if (imgSrc.startsWith('assets/')) {
+              imgSrc = '../' + imgSrc;
+            }
+            avatarEl.src = imgSrc;
             if (profile.imgAlt) avatarEl.alt = profile.imgAlt;
           }
         } catch {
