@@ -29,9 +29,21 @@ profileLinks.forEach(link => {
 
     if (!name || !img) return;
 
+    const originalImgSrc = img.getAttribute('src');
+    let imgSrc = originalImgSrc || '';
+
+    // Ajusta caminho para o arquivo catalogo/catalogo.html
+    if (imgSrc.startsWith('/')) {
+      imgSrc = '..' + imgSrc;
+    } else if (imgSrc.startsWith('assets/')) {
+      imgSrc = '../' + imgSrc;
+    } else if (imgSrc.startsWith('./assets/')) {
+      imgSrc = '../' + imgSrc.slice(2);
+    }
+
     const activeProfile = {
       name,
-      imgSrc: img.getAttribute('src'),
+      imgSrc,
       imgAlt: img.getAttribute('alt')
     };
 
